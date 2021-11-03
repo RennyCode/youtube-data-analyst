@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body  %}
+    All Playlists:
+    <br>
+    {% for table in playlists_tables %}
+        {{ table|safe }}
+    {% endfor %}
+    <br>
+    the number of videos in playlists: {{playlists_vid_count }}
+
+    <div class="pie_chart_div" >
+        <img class="pie_chart" src = "{{url_for('static', filename='img/pie_playlist_years.png')}}"  alt= "pie_playlist_years">
+    </div>
+    <br><br>
+
+
+    All subscriptions:
+    <br>
+    {% for table in sub_tables %}
+        {{ table|safe }}
+    {% endfor %}
+    
+    <br>
+    the subscription count is: {{ sub_count }}
+    <br>
+    the Hebrew subscription count is: {{ hebrew_count }}
+
+
+    <div class="pie_chart_div" >
+        <img class="pie_chart" src = "{{url_for('static', filename='img/pie_lang.png')}}"  alt= "pie_lang">
+    </div>
+   
+
+{% endblock %}
