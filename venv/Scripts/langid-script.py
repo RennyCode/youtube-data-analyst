@@ -1,4 +1,4 @@
-#!c:\users\renny\desktop\coding\vscode\github\youtube_data_analyst\venv\scripts\python.exe
+#!C:\Users\Renny\Documents\GitHub\youtube_data_analyst\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'langid==1.1.6','console_scripts','langid'
 import re
 import sys
