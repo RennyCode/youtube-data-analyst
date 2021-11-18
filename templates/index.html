@@ -1,35 +1,68 @@
 {% extends 'layout.html' %}
-
 {% block body  %}
-    All Playlists:
-    <br>
-    {% for table in playlists_tables %}
-        {{ table|safe }}
-    {% endfor %}
-    <br>
-    the number of videos in playlists: {{playlists_vid_count }}
 
-    <div class="pie_chart_div" >
-        <img class="pie_chart" src = "{{url_for('static', filename='img/pie_playlist_years.png')}}"  alt= "pie_playlist_years">
+<div class="main_container">
+    <div>
+        <h2>Let's ravage your youtube data to see what we could find... </h2>    
     </div>
-    <br><br>
 
+    <div class="grid_pies">
+        <div class="pie_chart_div" >
+            the number of videos in playlists: {{playlists_vid_count }}
+            <br>
+            most of the playlists were created in {{active_years}}
+            <img class="pie_chart" src = "{{url_for('static', filename='img/pie_playlist_years.png')}}"  alt= "pie_playlist_years">
+        </div>
 
-    All subscriptions:
-    <br>
-    {% for table in sub_tables %}
-        {{ table|safe }}
-    {% endfor %}
-    
-    <br>
-    the subscription count is: {{ sub_count }}
-    <br>
-    the Hebrew subscription count is: {{ hebrew_count }}
+        <div class="pie_chart_div" >
+            the subscription count is: {{ sub_count }}
+            <br>
+            {{ hebrew_count }} of them are in hebrew
+            <img class="pie_chart" src = "{{url_for('static', filename='img/pie_lang.png')}}"  alt= "pie_lang">
+        </div>
 
+    </div> 
 
-    <div class="pie_chart_div" >
-        <img class="pie_chart" src = "{{url_for('static', filename='img/pie_lang.png')}}"  alt= "pie_lang">
+    <div class="carousel_div">
+        <input type="radio" name="position"  />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" checked/>
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <main id="carousel">
+            <div class="item">
+                <img class="pie_carousel" src = "{{url_for('static', filename='img/pie_hours_search.png')}}"  alt= "pie_playlist_years">
+            </div>
+            <div class="item">
+                <img class="pie_carousel" src = "{{url_for('static', filename='img/pie_years_search.png')}}"  alt= "pie_playlist_years">
+            </div>
+            <div class="item">
+                <img class="pie_carousel" src = "{{url_for('static', filename='img/pie_lib_history.png')}}"  alt= "pie_playlist_years">
+            </div>
+            <div class="item">
+                <img class="pie_carousel" src = "{{url_for('static', filename='img/pie_code_history.png')}}"  alt= "pie_playlist_years">
+            </div>
+            <div class="item">
+                <img class="pie_carousel" src = "{{url_for('static', filename='img/pie_game_history.png')}}"  alt= "pie_playlist_years">
+            </div>
+        </main>
     </div>
-   
 
+
+
+
+
+
+    <div class="bar_div">
+        Found {{history_count}} videos in you watch history
+        <br>
+        {% if anime_count %}
+            {{anime_count}} of them has the word anime you Weeabo
+        {% endif %}
+        <img class="bar" src = "{{url_for('static', filename='img/bar_history.png')}}"  alt= "bar_lang">
+    </div>
+
+</div>
+<div class="right_side">
+</div>
 {% endblock %}
