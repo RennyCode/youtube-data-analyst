@@ -6,9 +6,9 @@ Usage of libaries such as numpy, numplotlib.
 
 <div style = "padding-bottom: 150; padding-top: 150;">
   <p align="center">
-    <img src="/pic3.png"  style = " height: 350;  display:block; margin: auto; width:30%;"/>
-    <img src="/pic4.png"  style = " height: 350;  display:block; margin: auto; width:30%;"/>
-    <img src="/pic1.png"  style = " height: 350;  display:block; margin-right: auto;  width:30%;"/>
+    <img src="/pic3.png"  style = " height: 350;  display:block; width:30%;"/>
+    <img src="/pic2.png"  style = " height: 350;  display:block; width:30%;"/>
+    <img src="/pic1.png"  style = " height: 350;  display:block; width:30%;"/>
    </p>
 </div>
 
